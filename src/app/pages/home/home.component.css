@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.titulo {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  width: 850px;
+  margin: 0 auto;
+}
+
+.cont_espera {
+  width: 940px;
+  height: 380px;
+  background: #1c1e21;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  margin: 60px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_espera {
+  background: linear-gradient(92.86deg, #8000ff 3.72%, #9f3fc0 96.71%);
+  border-radius: 100px;
+  padding: 20px 25px;
+  color: #ffffff;
+  border: none;
+}

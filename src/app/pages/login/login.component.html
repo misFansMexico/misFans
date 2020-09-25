@@ -1,0 +1,42 @@
+<div class="login">
+  <h3>Inicia sesión</h3>
+  <a class="facebook btn" (click)="log_facebook()">
+    <span>Iniciar con Facebook</span>
+  </a>
+  <a class="twitter btn" (click)="log_twitter()">
+    <span>Iniciar con Twitter</span>
+  </a>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="input-item">
+      <label for="">Correo electroníco</label>
+      <input
+        email
+        name="email"
+        type="email"
+        placeholder="tu@correo.com"
+        [(ngModel)]="usuario.email"
+      />
+    </div>
+    <div class="input-item">
+      <label for="">Contraseña</label>
+      <input
+        type="password"
+        placeholder="contraseña"
+        name="password"
+        [(ngModel)]="usuario.password"
+      />
+    </div>
+    <button class="correo_submit btn" type="submit">
+      <span>Iniciar sesión con correo electroníco</span>
+    </button>
+  </form>
+  <span class="leyenda"
+    >Al registrarse aceptas los <a class="link">Términos y Condiciones</a> de
+    MisFans.
+  </span>
+  <a class="link">¿Olvidaste tu contraseña?</a>
+  <span class="leyenda"
+    >No tienes una cuenta
+    <a class="link" [routerLink]="['/registro']">Registrarme</a>
+  </span>
+</div>

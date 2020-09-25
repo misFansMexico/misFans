@@ -117,8 +117,16 @@
               "devServerTarget": "misFans:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "misFans"
+    }
+  },
+  "defaultProject": "misFans",
+  "cli": {
+    "analytics": "63b6d711-0073-4f77-bac1-9a0479e4aa65"
+  }
 }
