@@ -18,6 +18,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFilm } from '@fortawesome/free-solid-svg-icons';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ContenidoComponent } from './components/modals/contenido/contenido.component';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -27,7 +34,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
     HomeComponent,
     CreadorComponent,
     ProfileComponent,
+    ContenidoComponent,
   ],
+  entryComponents: [ContenidoComponent],
   imports: [
     BrowserModule,
     APP_ROUTING,
@@ -36,6 +45,12 @@ import { ProfileComponent } from './pages/profile/profile.component';
     AngularFireAuthModule,
     AngularFirestoreModule,
     FontAwesomeModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatChipsModule,
+    MatButtonModule,
+    MatProgressSpinnerModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

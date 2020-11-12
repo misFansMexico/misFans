@@ -21,6 +21,7 @@ export class CreadorComponent implements OnInit {
     account_instagram: '',
     account_twitter: '',
     account_tiktok: '',
+    account_facebook: '',
   };
   constructor(
     private router: Router,

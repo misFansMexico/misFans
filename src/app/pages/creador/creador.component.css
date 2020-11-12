@@ -1,17 +1,19 @@
-* {
+:host {
   font-family: "DM Sans", sans-serif;
 }
 .header {
   width: 100%;
   height: 330px;
-  overflow: hidden;
   position: absolute;
   z-index: -1;
   top: 0;
+  overflow: hidden;
 }
 
 .header img {
   width: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
 .capa_humo {
@@ -46,6 +48,9 @@
 
 .background_foto img {
   width: 100%;
+  object-fit: cover;
+  object-position: top;
+  height: 100%;
 }
 
 .full_name {
@@ -99,6 +104,10 @@
 
 .redes_sociales {
   margin: 26px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 400px;
+  width: 100%;
 }
 
 .red_social {
@@ -108,7 +117,10 @@
   border-radius: 100px;
   background: transparent;
   color: white;
-  margin-right: 9px;
+  margin: 8px;
+  line-height: 42px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .conteido_creador {
@@ -136,4 +148,12 @@
 
 .pre_registrado {
   background: rgba(90, 255, 87, 0.87);
+}
+
+@media (max-width: 768px) {
+  .conteido_creador {
+    min-width: 350px;
+    width: 90%;
+    margin: 40px 10px 0 10px;
+  }
 }

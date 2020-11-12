@@ -12,9 +12,6 @@ export class AppComponent {
 
   constructor(private afAuth: AngularFireAuth, private route: Router) {
     this.afAuth.authState.subscribe((user) => {
-      console.log(this.route.getCurrentNavigation());
-      // if (user) this.route.navigateByUrl(`/home`);
-      // else this.route.navigateByUrl(`/login`);
       if (!user) this.route.navigateByUrl(`/login`);
     });
   }

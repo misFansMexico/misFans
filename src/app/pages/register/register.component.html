@@ -1,10 +1,10 @@
 <div class="login">
   <h3>Registrarme</h3>
   <a (click)="log_facebook()" class="facebook btn">
-    <span>Inicia con Facebook</span>
+    <span>Iniciar con Facebook</span>
   </a>
   <a class="twitter btn" (click)="log_twitter()">
-    <span>Inicia con Twitter</span>
+    <span>Iniciar con Twitter</span>
   </a>
   <form #f="ngForm" (ngSubmit)="onSubmit(f)">
     <div class="input-item">
@@ -27,7 +27,7 @@
       />
     </div>
     <button class="correo_submit btn" type="submit">
-      Registrarme con correo electroníco
+      <span>Registrarme con correo electroníco</span>
     </button>
   </form>
   <span class="leyenda"

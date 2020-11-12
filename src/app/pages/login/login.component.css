@@ -1,3 +1,9 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 .login {
   display: flex;
   flex-direction: column;
@@ -31,7 +37,7 @@ h3 {
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  margin: 20px 0;
+  margin: 10px 0;
   cursor: pointer;
 }
 
