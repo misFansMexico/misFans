@@ -2,8 +2,11 @@
   <div class="pie_imagen">
     <input type="text" placeholder="Escribe un pie de foto" />
   </div>
-  <div class="cont_media">
+  <div class="cont_media" *ngIf="file">
     <img src="" alt="" #img_media />
+    <button class="btn_close" mat-mini-fab color="primary">
+      <fa-icon class="close_icon" [icon]="icon_close"></fa-icon>
+    </button>
   </div>
   <div class="botonera_media">
     <input type="file" hidden #file_media (change)="onChangeFileInput()" />

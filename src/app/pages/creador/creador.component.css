@@ -1,9 +1,18 @@
 :host {
   font-family: "DM Sans", sans-serif;
 }
+header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 45px;
+  padding: 48px 25px 0 25px;
+}
 .header {
   width: 100%;
-  height: 330px;
+  height: 220px;
   position: absolute;
   z-index: -1;
   top: 0;
@@ -24,7 +33,7 @@
   background: linear-gradient(180deg, rgba(17, 17, 17, 0.29) 0%, #242526 100%);
 }
 .principal {
-  margin-top: 200px;
+  margin-top: 50px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -42,7 +51,6 @@
   height: 160px;
   background: #adadad;
   border-radius: 50%;
-  border: 7px solid white;
   overflow: hidden;
 }
 
@@ -60,7 +68,7 @@
   align-items: center;
 }
 
-.verificaion {
+/* .verificaion {
   width: 30px;
   height: 30px;
   background: linear-gradient(
@@ -74,7 +82,7 @@
   justify-content: center;
   align-items: center;
   margin-left: 18px;
-}
+} */
 
 .check_icon {
   color: white;
@@ -123,27 +131,47 @@
   text-decoration: none;
 }
 
-.conteido_creador {
+.contenido_creador {
   margin: 40px 0 0 0;
-  width: 700px;
-  height: 400px;
+  max-width: 305px;
+  width: 305px;
+  height: 300px;
   border-radius: 20px;
   background: #1c1e21;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  padding: 29px 31px;
+}
+
+.beneficios {
+  color: white;
+}
+
+.beneficios span {
+  font-weight: bold;
+  font-size: 20.1758px;
+  text-align: center;
+  letter-spacing: -0.42033px;
+}
+
+.beneficios ul {
+  list-style: none;
 }
 
 .boton_preRegistro {
-  height: 62px;
-  font-size: 19px;
-  line-height: 22px;
+  margin-top: 5px;
+  width: 243.79px;
+  height: 53.22px;
+  font-size: 18px;
+  line-height: 20px;
   letter-spacing: -0.3px;
-  color: #000000;
+  color: #ffffff;
   padding: 20px 25px;
-  border-radius: 100px;
   border-style: none;
+  background: #9814ff;
+  border-radius: 10.0879px;
 }
 
 .pre_registrado {

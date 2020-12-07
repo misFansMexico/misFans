@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-contenido',
@@ -17,6 +18,7 @@ export class ContenidoComponent implements OnInit {
   urlImage: Observable<string>;
   creadores = [];
   creador = '';
+  icon_close = faTimes;
 
   constructor(
     private storage: AngularFireStorage,
@@ -61,10 +63,16 @@ export class ContenidoComponent implements OnInit {
   async upload() {
     const id = Math.random().toString(36).substring(2);
     const filePath = `contenido/${this.creador}/${id}`;
-    const ref = this.storage.ref(filePath);
-    await ref.put(this.file);
-    ref.getDownloadURL().subscribe((data) => {
-      console.log(data);
+    const tarea = this.storage.upload(filePath, this.file);
+
+    tarea.percentageChanges().subscribe((porcentaje) => {
+      console.log(porcentaje);
+    });
+
+    tarea.task.then((data) => {
+      data.ref.getDownloadURL().then((url) => {
+        console.log(url);
+      });
     });
   }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-creador',
@@ -23,6 +24,7 @@ export class CreadorComponent implements OnInit {
     account_tiktok: '',
     account_facebook: '',
   };
+  menu = faBars;
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,

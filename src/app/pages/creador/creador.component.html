@@ -1,3 +1,11 @@
+<header>
+  <div class="logo">
+    <span>MisFans</span>
+  </div>
+  <div class="menu">
+    <fa-icon [icon]="menu"></fa-icon>
+  </div>
+</header>
 <div class="header">
   <img src="{{ creador.img_portada }}" alt="" />
   <div class="capa_humo"></div>
@@ -11,15 +19,12 @@
     </div>
     <div class="full_name">
       <span>{{ creador.nombre }}</span>
-      <div class="verificaion">
-        <fa-icon class="check_icon" [icon]="faCheck"></fa-icon>
-      </div>
     </div>
     <div class="description">
       <span>{{ creador.description }}</span>
     </div>
     <div class="redes_sociales">
-      <a
+      <!-- <a
         class="red_social"
         href="http://instagram.com/{{ creador.account_instagram }}"
         target="blank"
@@ -49,23 +54,33 @@
         target="blank"
         >TikTok</a
       >
+    </div> -->
     </div>
-  </div>
 
-  <div class="conteido_creador">
-    <button
-      *ngIf="!pre_registrado"
-      class="boton_preRegistro"
-      (click)="pre_registro(true)"
-    >
-      Unéte para ver el contenido
-    </button>
-    <button
-      *ngIf="pre_registrado"
-      class="boton_preRegistro pre_registrado"
-      (click)="pre_registro(false)"
-    >
-      Ya estás pre-registrado
-    </button>
+    <div class="contenido_creador">
+      <div class="beneficios">
+        <span>Beneficios de fans.</span>
+        <ul>
+          <li>This is a long ass perk line.</li>
+          <li>This is a long ass perk line.</li>
+          <li>This is a long ass perk line.</li>
+          <li>This is a long ass perk line.</li>
+        </ul>
+      </div>
+      <button
+        *ngIf="!pre_registrado"
+        class="boton_preRegistro"
+        (click)="pre_registro(true)"
+      >
+        ¡Únete ahora!
+      </button>
+      <button
+        *ngIf="pre_registrado"
+        class="boton_preRegistro pre_registrado"
+        (click)="pre_registro(false)"
+      >
+        Ya estás pre-registrado
+      </button>
+    </div>
   </div>
 </div>
